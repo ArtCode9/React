@@ -1,7 +1,7 @@
 # React
-20205 - xx - xx
+20205 - Dec - 25
 
-title:
+title: React master
 ```
-   this is just new start .....
+   learning begin😎
 ```

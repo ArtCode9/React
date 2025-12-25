@@ -36,7 +36,7 @@ instead react will figure out & perform the necessary steps.
 - React 
    - Declarative 
    - define  the goal , not the steps
-   ```
+   ```jsx
    let content;
    if(user.isLoggedIn){
       content = <button>continue</button>
@@ -48,7 +48,7 @@ instead react will figure out & perform the necessary steps.
 - Javascript 
    - Imperative 
    - define the steps, not the goal 
-   ```
+   ```js
    let btn = document.querySelector('button');
    if(user.isLoggedIn){
       btn.textContent = 'Continue';

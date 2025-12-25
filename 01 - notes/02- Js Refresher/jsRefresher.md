@@ -78,3 +78,21 @@
       into the HTML code for you.
 
 ---------------------------------------------------------
+
+
+React Project use a build process which simply means 
+the code you write is not the code that gets executed 
+(like this) in the browser. instead the code you write 
+is transformed behind the scenes before it is handed
+off to the browser.
+
+-----------------------------------------------------------
+
+#### React Project Use a Build Process
+
+1️⃣. Raw , unprocessed React code ***won't execute*** in the browser.
+   🔻JSX is not a default javascript feature
+2️⃣. in addition the code would not be optimized for production(e.g, not minified)
+
+➡️ React project require a build process that transforms your code
+    create-react-app, vite, etc . give you such a build process(no custom setup or tweaking needed)
