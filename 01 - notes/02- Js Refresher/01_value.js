@@ -38,7 +38,7 @@
  * 
  * */
 
-console.warn(`=============👇value section=============`);
+// console.warn(`=============👇value section=============`);
 
 let userName = 'ARTCODE';
 let numberPhone = 9281272;
@@ -53,7 +53,7 @@ let user = {
 };
 
 // can access value inside the object
-console.warn(user.developer);
+// console.warn(user.developer);
 
 // can change them 
 user.isLove = true;
