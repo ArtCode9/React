@@ -96,3 +96,13 @@ off to the browser.
 
 ➡️ React project require a build process that transforms your code
     create-react-app, vite, etc . give you such a build process(no custom setup or tweaking needed)
+
+
+-----------------
+
+React will actually take all your imports and exports
+and basically merge all these separate files that you have 
+during development into one big file or a bunch of big files,
+which are then imported with the old school syntax in the right order.
+
+
