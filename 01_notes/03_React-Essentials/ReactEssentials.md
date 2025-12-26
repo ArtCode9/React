@@ -143,9 +143,14 @@ Component re-rendering (this is where React gets interesting)
 
 ---------------------------
 
-instruction : 
+instruction for run project local:
+(after download zip file) 
+
+navigate to the project folder📂
+ ``` cd .\folder\project_folder```
+
 ```
-  $ npm install   ---->  for install all library and modules and react lib
+  $ npm install   ---->  for install all library and modules and react lib and third party package
 ```
 Then : 
 ```
