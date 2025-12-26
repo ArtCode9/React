@@ -13,8 +13,8 @@ const userDev  = {
    }
 }
 
-console.log(userDev.name); // this . is a key to accessing values in an object
-userDev.greet();
+// console.log(userDev.name); // this . is a key to accessing values in an object
+// userDev.greet();
 
 
 // with class keyword you can create a blueprint that can then later be used to create the actual object
@@ -35,5 +35,5 @@ class Users {
 
 // now we create a new object based on the class above (that blueprint)
 const user1 = new Users("ARTCODE", 231);
-console.warn(user1);
-user1.greeting();
+// console.warn(user1);
+// user1.greeting();
