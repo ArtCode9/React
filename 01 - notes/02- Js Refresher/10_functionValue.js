@@ -23,4 +23,4 @@ function greeter(greetFn) {
    greetFn();
 }
 
-greeter(() => console.error(`Hiiiiii`));
+// greeter(() => console.error(`Hiiiiii`));
