@@ -24,5 +24,5 @@ if(10 === 10) {
 const games = ['game1', 'game2', 'game3'];
 
 for (const game of games) {
-   console.warn(game);
+   // console.warn(game);
 }
