@@ -9,7 +9,7 @@ const newHobbies = ["reading"];
 
 const mergedHobbies = [ ...hobbies2, ...newHobbies];
 
-console.log(mergedHobbies);
+// console.log(mergedHobbies);
 
 // now we can use  spread operator  ...   on object 
 const userMan = {
@@ -22,4 +22,4 @@ const extendedUser = {
    ...userMan
 }
 
-console.log(extendedUser);
+// console.log(extendedUser);

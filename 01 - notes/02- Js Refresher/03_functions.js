@@ -18,10 +18,10 @@ function getPoint(player, p = 0){   // two parameter with one with default
 }
 
 //  type 3 arrow function   (anonymous functions)
-export default (userName , message ) => {
-   console.log('Hello');
-   return userName + message;
-}
+// export default (userName , message ) => {
+//    console.log('Hello');
+//    return userName + message;
+// }
 
 // also we can store function in variable or constant
 const point = getPoint('number 3', 234);
