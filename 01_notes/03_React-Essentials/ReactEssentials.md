@@ -139,3 +139,17 @@ Functional components
 Props vs state
 
 Component re-rendering (this is where React gets interesting)
+
+
+---------------------------
+
+instruction : 
+```
+  $ npm install   ---->  for install all library and modules and react lib
+```
+Then : 
+```
+   npm run dev  --->    run development server
+```
+
+
