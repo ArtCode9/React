@@ -199,3 +199,17 @@ This, again, has nothing to do with the browser or "standard JavaScript" - inste
 
 
 ---------------------------
+
+## Built-in Components 
+
+   - Name starts with a  lowercase char
+   - Only valid, officially defined html elements are allowed
+   - Are rendered as DOM nodes by React (i.e displayed on the screen)
+
+## Custom Components
+
+   - Name starts with uppercase char
+   - Defined by you "wraps" built-in or other custom components
+   - React traverses the components tree until it has only built-in components left
+
+---------------------------
