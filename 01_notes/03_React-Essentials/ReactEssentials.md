@@ -213,3 +213,29 @@ This, again, has nothing to do with the browser or "standard JavaScript" - inste
    - React traverses the components tree until it has only built-in components left
 
 ---------------------------
+
+
+### Q&A
+
+1. Which statement about JSX is TRUE? 
+   - JSX code is used to define the target UI / HTML code
+
+2. What's the purpose of JSX?
+   - It allows you to define the target HTML code inside of your components
+
+3. Which statement about custom components is true?
+   - Custom components can be created as JavaScript functions
+   - To use custom components in JSX, they must start with an uppercase character
+   - Custom components must return renderable content (typically JSX)
+ 
+4. From the perspective of a developer: What's one advantage of building a user interface by combining components?
+   - Small, reusable building blocks
+
+5. When working with React: How is a new component defined?
+   - By creating a function that returns JSX code
+
+6. How do you typically use custom components?
+   - You use custom components like HTML elements inside of JSX code
+
+7. What does React do with the components you use in the JSX code?
+   - It derives a component tree that's then used to perform commands that update the website DOM

@@ -1,1 +1,18 @@
 * text=auto
+
+
+#   What LF and CRLF mean (human version)
+
+#  Text files have invisible “end of line” characters.
+
+#  LF (\n)
+#  Used by Linux & macOS
+
+#  CRLF (\r\n)
+#  Used by Windows
+
+#  Your warning says:
+
+#  “This file currently uses LF, but Git is going to convert it to CRLF next time it touches it.”
+
+#  That’s it. Nothing more dramatic.
