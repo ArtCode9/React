@@ -239,3 +239,19 @@ This, again, has nothing to do with the browser or "standard JavaScript" - inste
 
 7. What does React do with the components you use in the JSX code?
    - It derives a component tree that's then used to perform commands that update the website DOM
+
+---------------------------------
+
+## How we can actually output dynamic content in such a component ?
+
+
+### Static content : 
+   - Content that is hardcoded into the JSX code
+   - Can not change at runtime
+   - Example:  ```<h1>Hello World!</h1>```
+
+### Dynamic content 
+   - Logic that produces the actual value is added to JSX
+   - Content / Value is derived at runtime
+   - Example:  ```<h1>{userName}</h1>```
+----------------
