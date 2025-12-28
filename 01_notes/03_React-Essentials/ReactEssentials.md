@@ -288,3 +288,10 @@ React allows you to pass data to components vai a concept called "Props"
    - Receives props parameter with configuration data
 
 Tips: Props Accept all value Types
+
+
+
+----------------
+
+# 06-alternative-props-syntax:
+
