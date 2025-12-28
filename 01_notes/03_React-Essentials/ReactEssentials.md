@@ -395,3 +395,40 @@ Which values can be output as dynamic values in JSX (i.e., between curly braces)
 
 ---------------------------------
 
+every custom component will receive props.
+
+-----------------------------
+
+## "Children" prop vs "Attribute Props"
+
+### Using "Children" :
+```js 
+<TabButton>Components</TabButton>
+```
+```js
+function TabButton({ children }){
+   return <button>{children}</button>
+}
+```
+For Components that take a single piece of renderable content, this approach is closer to normal html usage
+
+This approach is especially convenient when passing JSX code as a value to another component
+
+-------------------------
+### Using attribute :
+```js 
+<TabButton label="Component"></TabButton>
+```
+```js
+function TabButton({ label }) {
+   return <button>{label}</button>
+}
+```
+This approach makes sense if you got multiple smaller pieces of information that must be passed to a component
+
+Adding extra props instead of just wrapping the content with the component tags mean extra work
+
+***Ultimately , it comes yo your use-case and personal preferences***
+
+----------
+
