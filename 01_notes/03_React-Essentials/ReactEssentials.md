@@ -255,3 +255,17 @@ This, again, has nothing to do with the browser or "standard JavaScript" - inste
    - Content / Value is derived at runtime
    - Example:  ```<h1>{userName}</h1>```
 ----------------
+
+React Project & "The Build Process"
+
+React projects must be "built" (via a build process) before deployment
+
+React Code(the react code you write and build) ---> ⚙️Build Process  --->  Deployable Files
+
+#### ⚙️Build Process:
+   - Changes & optimizes Your code
+   - Transform it such that it runs in the browser
+   - Also (Potentially) optimizes other assets like css and img file
+
+#### Deployable Files
+   - A collection of generated files that include your files that include your optimized code and any other extra assets(e.g CSS code files optimized img and etc)

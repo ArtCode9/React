@@ -1,5 +1,8 @@
 //  this is a React component 👇👇👇👇
 
+import reactImg from './assets/react-core-concepts.png';
+
+
 const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
 function genRandomInt(max){
   return Math.floor(Math.random() * (max + 1));
@@ -10,13 +13,14 @@ function genRandomInt(max){
 // now i  want to create new React component 
 // {} in p tag element mean wanna output a dynamic value
 function Header(){
-    // also can pull that code {} out of the JSX code and do this 
+    // also can pull that code {} outputting dynamic values
+    //  out of the JSX code and do this 
     const des = reactDescriptions[genRandomInt(2)];
 
     // This JSX code 👇👇
     return(
       <header>
-        <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
+        <img src={reactImg} alt="Stylized atom" />
         <h1>React Essentials</h1>
         <p>
           {des} React concepts you will need for almost any app you are
