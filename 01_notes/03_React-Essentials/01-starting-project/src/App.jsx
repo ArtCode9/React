@@ -1,12 +1,25 @@
 //  this is a React component 👇👇👇👇
+
+const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
+function genRandomInt(max){
+  return Math.floor(Math.random() * (max + 1));
+}
+
+
+
 // now i  want to create new React component 
+// {} in p tag element mean wanna output a dynamic value
 function Header(){
+    // also can pull that code {} out of the JSX code and do this 
+    const des = reactDescriptions[genRandomInt(2)];
+
+    // This JSX code 👇👇
     return(
       <header>
         <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
         <h1>React Essentials</h1>
         <p>
-          Fundamental React concepts you will need for almost any app you are
+          {des} React concepts you will need for almost any app you are
           going to build!
         </p>
       </header>
@@ -15,6 +28,7 @@ function Header(){
 // if it was only js we use just to execute it: Header();   but that's not how React component use and do
 // now for use this component in App() we add the Header function like this : <Header /> as you can see below
 // and this is how we build React  component
+
 
 // for export you can do this :  export function MyMainGoal () {...}
 function MyMainGoal () {
@@ -28,7 +42,7 @@ function MyMainGoal () {
     </div>
   ); 
 }
-
+// ========================
 
 //  This App function belong to raw code file 
 function App() {
