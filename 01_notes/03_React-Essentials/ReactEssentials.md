@@ -375,3 +375,23 @@ export default function Button({ caption, type = "submit" }) {
 }
 ```
 -----------------------------------
+How should you typically load / use images in React projects?
+   -  Set the ```<img>``` src equal to the path generated via an import statement (that points at the image)
+
+Which core React concept can increase the reusability of React components?
+   - Props
+
+How do "props" work in React?
+   - You can set props ("custom attributes") on components to then extract & use them in the receiving component
+
+How can you assign a dynamic value to an HTML element attribute?
+   - Via the same syntax you use for dynamic values in JSX in general: Curly braces
+
+Which syntax can be used to output dynamic values / JavaScript expressions in JSX?
+   - { } (Curly braces)
+
+Which values can be output as dynamic values in JSX (i.e., between curly braces)?
+   - Any valid JavaScript expression
+
+---------------------------------
+
