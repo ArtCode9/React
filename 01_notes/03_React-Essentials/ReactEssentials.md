@@ -269,3 +269,22 @@ React Code(the react code you write and build) ---> ⚙️Build Process  --->  D
 
 #### Deployable Files
    - A collection of generated files that include your files that include your optimized code and any other extra assets(e.g CSS code files optimized img and etc)
+
+
+----------------------------
+
+Configuring Components with Props
+
+React allows you to pass data to components vai a concept called "Props"
+
+#### JSX Code that Uses a component (set Props)
+   - set component input data via "Custom HTML attribute"(props)
+
+#### 🧩 Component 
+   - Defines internal logic + JSX code that should be rendered 
+   - (Receive Props)
+
+#### Component Function 
+   - Receives props parameter with configuration data
+
+Tips: Props Accept all value Types
