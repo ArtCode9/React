@@ -527,3 +527,48 @@ function SomeComponent() {
 
 ----------------
 
+## Conditional Content & Dynamic Lists
+
+1. Which code snippet WILL WORK and output a list dynamically?
+```js 
+   <ul>
+  {[1, 2, 3].map(number => <li key={number}>{number}</li>)}
+</ul>
+```
+
+2. What's the problem with this code?
+```js
+<div>
+  {someArray.map(item => <p>{item}</p>)}
+</div>
+```
+   - You should add a key prop to the list item
+
+3. Which of the following code snippets WILL NOT output the content conditionally?
+
+```js 
+function SomeComponent() {
+  const [contentIsVisible, setContentIsVisible] = useState(false);
+
+  function handleClick() {
+    setContentIsVisible(true);
+  }
+```
+
+```js
+function SomeComponent() {
+  const [contentIsVisible, setContentIsVisible] = useState(false);
+
+  function handleClick() {
+    setContentIsVisible(true);
+  }
+
+  return (
+    <div>
+     <p show={contentIsVisible}>Visible</p>
+     <button onClick={handleClick}>Show Content</button>
+    </div>
+  );
+}
+```
+----------------------
