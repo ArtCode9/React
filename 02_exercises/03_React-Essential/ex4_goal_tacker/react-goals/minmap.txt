@@ -1,0 +1,202 @@
+Browser
+ └── index.html
+      └── React Root (#app / #root)
+           └── <App />
+                ├── Input
+                ├── Button
+                └── Goal List
+                     └── <GoalItem />
+-----------------------------------------------
+Key idea:
+React does not “run pages”.
+It renders a tree.
+--------------------------------------------
+react-goals/
+├── index.html          ← real DOM entry point
+├── src/
+│   ├── main.jsx        ← React bootloader
+│   ├── App.jsx         ← Root component (brain)
+│   ├── components/
+│   │   └── GoalItem.jsx ← Child component
+│   └── assets/         ← images, fonts, etc.
+└── package.json
+----------------------------------------------
+Why this structure exists
+main.jsx → connects React to the browser
+App.jsx → owns state & logic
+components/ → reusable UI pieces
+index.html → just a shell
+React lives entirely inside one DOM node.
+-----------------------------------------------
+3. Boot Process (What Runs First)
+Step-by-step reality
+Browser loads index.html
+<div id="root"></div> exists
+main.jsx runs:
+Creates React root
+Renders <App />
+React calls App() function
+JSX → Virtual DOM
+Virtual DOM → Real DOM
+Nothing magical. Just functions.
+---------------------------------------------
+4. App Component = Control Center
+Responsibilities of <App />
+
+<App />
+ ├── Holds state (goals, enteredGoal)
+ ├── Handles events (addGoal)
+ ├── Passes data down (props)
+ └── Decides what to render
+
+This is intentional design:
+
+State lives high
+
+UI lives low
+
+This prevents chaos.
+------------------------------------------
+5. State Mind Map (Data Flow)
+
+State Variables
+
+State
+├── goals (array)
+│    └── ["Learn React", "Build projects"]
+└── enteredGoal (string)
+     └── "Learn React"
+
+-----------------------------------------
+Rules of state (non-negotiable)
+
+State changes → re-render
+
+Never mutate state directly
+
+Always use setter functions
+
+UI is a function of state
+
+React watches data, not the DOM.
+-----------------------------------------
+6. Event Flow (Cause → Effect)
+
+
+User Click
+ └── onClick
+      └── addGoal()
+           ├── setGoals()
+           ├── setEnteredGoal('')
+           └── React re-renders
+
+
+Important insight
+
+You are not updating the UI.
+You are updating data.
+React updates the UI because the data changed.
+
+This is the philosophical core of React.
+
+
+-------------------------
+7. Controlled Input Mental Model
+Input Field
+ ├── value = enteredGoal
+ └── onChange → setEnteredGoal()
+
+
+Why this matters:
+
+React owns the input
+
+No hidden DOM state
+
+Predictable behavior
+
+Easier validation later
+
+This is why React apps don’t spiral into madness.
+
+8. Rendering Lists (Data → UI)
+goals (array)
+ └── map()
+      └── <GoalItem text={goal} />
+
+
+Each item:
+
+Comes from data
+
+Becomes a component
+
+Gets a key for identity
+
+React tracks what changed, not what exists.
+
+9. Component Boundary Logic
+<GoalItem />
+GoalItem
+ ├── Receives props
+ │    └── text
+ └── Renders UI
+
+
+What it does NOT do:
+
+No state
+
+No logic
+
+No side effects
+
+This makes it:
+
+Reusable
+
+Testable
+
+Replaceable
+
+Components should be boringly simple.
+
+10. Data Direction (One-Way Flow)
+State (App)
+   ↓
+Props
+   ↓
+Child Components
+
+
+Never:
+
+Child modifying parent state directly
+
+Random cross-component access
+
+This rule alone saves thousands of bugs.
+
+11. React vs PHP Include (Your Insight)
+
+Your comparison was sharp 👏
+
+PHP include	React component
+Reuses markup	Reuses logic + UI
+Static output	Reactive output
+Runs once	Re-renders on change
+Server-side	Client-side
+
+React components are living includes.
+
+12. Final Mental Summary (Compress This)
+
+If you remember nothing else, remember this:
+
+React apps are functions of state
+Components are pure descriptions
+Events change data, not the DOM
+React handles the messy parts
+
+This project wasn’t small.
+It was fundamental.
