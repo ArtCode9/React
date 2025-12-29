@@ -572,3 +572,5 @@ function SomeComponent() {
 }
 ```
 ----------------------
+source link:<br>
+https://github.com/academind/react-complete-guide-course-resources/blob/main/code/03%20React%20Essentials/18-outputting-list-data/src/App.jsx
