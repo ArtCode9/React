@@ -456,3 +456,41 @@ Adding extra props instead of just wrapping the content with the component tags 
    - A pointer to the function that should be executed (e.g., onClick={handleClick})
 
 ------------------------
+
+
+# Rules of Hooks
+
+## 1️⃣. Only call hooks inside of component function 
+
+React hooks must not be called outside of react component functions
+
+```js
+✅ 
+function App() {
+   const [val, setVal] = useState(0);
+}
+```
+```js
+❌
+   const [val, setVal] = useState(0);
+
+   function App() {...}
+```
+
+## 2️⃣. only call Hooks on the top level
+React hook must not be called in nested code statement(e.g inside of it-statement)
+```js
+✅
+function App() {
+   const [val, setVal] = useState(0);
+}
+```
+```js
+❌
+function App(){
+   if(someCondition)
+      const [val, setVal] = useState(0);
+}
+```
+---------------------------------------
+
