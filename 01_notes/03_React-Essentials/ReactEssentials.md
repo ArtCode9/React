@@ -432,3 +432,27 @@ Adding extra props instead of just wrapping the content with the component tags 
 
 ----------
 
+## Best Practices & Event Handling
+
+1. How should you typically store your component functions?
+
+   - Split across multiple files (one component per file)
+
+
+2. How can you handle user events in React projects?
+
+   - Via the built-in onXYZ props (e.g., onClick)
+
+3. What's the purpose of the special "children" prop?
+
+   - You can use it to pass and use content between your component's opening & closing tags.
+
+4. How can you "configure" the execution of an event-dependent function (e.g., define which arguments get passed to it)?
+
+   - By wrapping the function with another function (e.g., onClick={() => handleClick(5)})
+
+5. To execute code upon events, which value must be passed to event props like onClick?
+
+   - A pointer to the function that should be executed (e.g., onClick={handleClick})
+
+------------------------
