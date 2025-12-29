@@ -494,3 +494,36 @@ function App(){
 ```
 ---------------------------------------
 
+# State & Computed Values
+ 
+1. There are two "Rules of Hooks".Which of the following statements is NOT TRUE according to those rules?
+
+   - You must not call React Hooks next to other Hooks.
+
+2. What's the purpose of "State" in React apps?
+
+   - It's data that, when changed, causes React to re-evaluate a component
+
+3. Will the following code work?
+```js
+import { useState } from 'react';
+
+function SomeComponent() {
+  const [selected, setSelected] = useState(false);
+
+  function handleClick() {
+    const [selected, setSelected] = useState(true);
+  }
+
+  return <button onClick={handleClick}>Select</button>
+}
+```
+   - No
+
+4. What's the idea behind "derived state" / "computed values"?
+
+   - Computed values are values that shouldn't be managed as separate state since they can be derived from other state.
+
+
+----------------
+
