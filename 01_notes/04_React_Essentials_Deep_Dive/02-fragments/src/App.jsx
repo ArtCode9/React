@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState } from 'react';  // You can import Fragment here form react 🧲
+
 import { CORE_CONCEPTS } from './data.js';
 import Header from './components/Header/Header.jsx';
 import CoreConcept from './components/CoreConcept.jsx';
@@ -30,7 +31,8 @@ function App() {
   }
 
   return (
-    <div>
+    // 🧲You can import Fragment from react above and use it like <Fragment></Fragment> or you can Use like  pro <></>
+    <>
       <Header />
       <main>
         <section id="core-concepts">
@@ -65,7 +67,7 @@ function App() {
            {tabContent}          
         </section>
       </main>
-    </div>
+    </>   
   );
 }
 
