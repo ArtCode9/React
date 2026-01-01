@@ -31,4 +31,5 @@ In this section we go Beyond basic :
    - Works without special build process and transformation 
    - pretty verbose and not necessarily intuitive
 ------------------------
-
+custom component must be passed as a dynamic  value so to say like . 
+``` buttonContainer={Section}```
