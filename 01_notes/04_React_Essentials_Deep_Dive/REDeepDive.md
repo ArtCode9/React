@@ -56,3 +56,12 @@ You should use the public/ folder for any images that should not be handled by t
 On the other hand, images that are used inside of components should typically be stored in the src/ folder (e.g., in src/assets/).
 
 --------------------------
+
+Lifting State up :
+lift the state up to the closest ancestor component that has access to all components that need to work with that state.
+
+- Ancestor passes a function that eventually changes the state via props to the child components
+- this allows the child components to initiate the state change
+
+- ancestor passes the state value via props to the child component.
+--------------
