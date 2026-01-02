@@ -1,5 +1,5 @@
 function App() {
-  return
+  return (
       <main>
         <div id="game-container">
           <ol id="players">
@@ -16,6 +16,7 @@ function App() {
         </div>
         LOG
       </main>
+    );
 }
 
 export default App;
