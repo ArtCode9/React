@@ -38,12 +38,16 @@ Static and Dynamic styling for pretty apps
 -  Advantage:
    - Quick and easy to add to jsx
    - styles only effect the element to which you add them
+   - Dynamic (conditional) styling is simple
 
 - Disadvantage: 
    - You need to know css
-   - You need ti style every element individually
+   - You need it style every element individually
+   - no separation between css and jsx code
 
 ---------------------
+
+
 
 
 
