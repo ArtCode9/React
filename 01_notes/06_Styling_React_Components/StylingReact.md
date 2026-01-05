@@ -47,8 +47,14 @@ Static and Dynamic styling for pretty apps
 
 ---------------------
 
+# CSS Modules 💡💡
+- Advantage : 
+   - Css code is decoupled from jsx code
+   - You write css code as you (maybe) know nad (maybe) love it
+   - css code can be written by another developer who need only minimal amount of access to your jsx code
+   - css classes are scoped to the component -> file which import them -> no css class name clashes
 
-
-
-
+- Disadvantage: 
+   - you need to know css
+   - You may end up with many relatively small css file in your project
 
