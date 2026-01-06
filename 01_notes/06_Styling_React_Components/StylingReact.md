@@ -58,3 +58,19 @@ Static and Dynamic styling for pretty apps
    - you need to know css
    - You may end up with many relatively small css file in your project
 
+---------------------
+
+# Styled Components Introduce:
+```
+   npm install styled-components
+```
+
+⚠️ i run this on terminal in 02-scoping-css 
+
+also search for tagged template :
+
+a more advanced form of template literals are tagged template.
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates
+
+--------

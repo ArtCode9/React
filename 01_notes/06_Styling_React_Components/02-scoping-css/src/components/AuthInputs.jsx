@@ -1,4 +1,15 @@
-import { useState } from 'react';
+import { useState } from 'react'; 
+import { styled } from 'styled-components';
+
+// 🫥 introducing styled component--------------
+  const ControlContainer =  styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  `
+// then we add this above const instead of div control section below
+// ---------------------------------------------
 
 export default function AuthInputs() {
   const [enteredEmail, setEnteredEmail] = useState('');
@@ -19,10 +30,11 @@ export default function AuthInputs() {
 
   const emailNotValid = submitted && !enteredEmail.includes('@');
   const passwordNotValid = submitted && enteredPassword.trim().length < 6;
-
+  
   return (
     <div id="auth-inputs">
-      <div className="controls">
+        {/* <div class="controls"> */}
+        <ControlContainer>
         <p>
           <label className= {`label
                                 ${emailNotValid ? 'invalid' : ''}
@@ -49,7 +61,8 @@ export default function AuthInputs() {
             }
           />
         </p>
-      </div>
+      </ControlContainer>
+      {/* </div> */}
       <div className="actions">
         <button type="button" className="text-button">
           Create a new account
