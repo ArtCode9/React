@@ -1,0 +1,53 @@
+React + Vite + Tailwind Setup
+│
+├─ 1. Prerequisites
+│   ├─ Node.js (v18+)
+│   ├─ npm
+│   ├─ Git
+│   └─ VS Code (optional)
+│
+├─ 2. Create React + Vite Project
+│   ├─ npm create vite@latest my-app
+│   ├─ Choose: React + JS/TS
+│   ├─ cd my-app
+│   ├─ npm install
+│   └─ npm run dev → check localhost:5173
+│
+├─ 3. Tailwind CSS Setup
+│   ├─ Option A: Tailwind v4 (latest)
+│   │   ├─ npm install -D tailwindcss @tailwindcss/vite
+│   │   ├─ npx tailwindcss init → tailwind.config.js
+│   │   ├─ Update content paths:
+│   │   │   ["./index.html", "./src/**/*.{js,jsx}"]
+│   │   ├─ CSS: src/index.css → @import "tailwindcss";
+│   │   ├─ Import CSS in src/main.jsx
+│   │   └─ Update vite.config.js → plugins: [react(), tailwindcss()]
+│   │
+│   └─ Option B: Tailwind v3 (legacy)
+│       ├─ npm install -D tailwindcss@3 postcss autoprefixer
+│       ├─ npx tailwindcss init -p → tailwind.config.js + postcss.config.js
+│       ├─ tailwind.config.js → update content paths
+│       ├─ postcss.config.js → plugins: { tailwindcss: {}, autoprefixer: {} }
+│       ├─ CSS: src/index.css
+│       │   ├─ @tailwind base;
+│       │   ├─ @tailwind components;
+│       │   └─ @tailwind utilities;
+│       └─ Import CSS in src/main.jsx
+│
+├─ 4. Test Tailwind
+│   ├─ src/App.jsx → add Tailwind classes
+│   │   e.g., <div className="min-h-screen bg-blue-900 flex items-center justify-center">
+│   └─ npm run dev → check styles
+│
+├─ 5. Git Integration
+│   ├─ git init
+│   ├─ git add .
+│   ├─ git commit -m "Initial React + Tailwind setup"
+│   ├─ git remote add origin <repo-url>
+│   └─ git push -u origin main
+│
+└─ 6. Notes
+    ├─ v4 → No PostCSS config, use vite plugin
+    ├─ v3 → Needs PostCSS config
+    ├─ VS Code → Install Tailwind CSS IntelliSense for autocomplete
+    └─ Always verify content paths in tailwind.config.js
