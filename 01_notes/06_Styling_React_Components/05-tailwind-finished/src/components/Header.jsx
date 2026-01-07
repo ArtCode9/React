@@ -1,0 +1,12 @@
+import logo from '../assets/logo.png';
+
+
+export default function Header() {
+  return (
+    <header className="flex flex-col item-center mt-8 mb-16 ">
+      <img src={logo} alt="A canvas" class="mb-8 w-44 h-44 object-contain"/>
+      <h1 class="text-4xl font-semibold tracking-widest text-center uppercase">ReactArt</h1>
+      <p>A community of artists and art-lovers.</p>
+    </header>
+  );
+}
