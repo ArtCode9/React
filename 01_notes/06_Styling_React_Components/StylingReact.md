@@ -78,4 +78,35 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
 # tagged templates
 
 
-search in MDN about it
+Template literals are literals delimited with backtick (`) characters, allowing for multi-line strings, string interpolation with embedded expressions, and special constructs called tagged templates.
+
+Template literals are sometimes informally called template strings, because they are used most commonly for string interpolation (to create strings by doing substitution of placeholders). However, a tagged template literal may not result in a string; it can be used with a custom tag function to perform whatever operations you want on the different parts of the template literal.
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
+
+-------------------
+
+# Styled Component:
+
+##### (Creating Reusable Components & Component Combinations)
+
+Advantage:
+   - Quick and easy to add
+   - You continue thinking in react(configurable style functions)
+   - styles are scoped to components -> no CSS rule clashes
+
+
+Disadvantages:
+   - You need to know CSS
+   - No clear separation of React and css code
+   - You end up with many relatively small wrapper components
+
+
+
+---------------
+# Tailwind 🪡🪡
+Get started with Tailwind CSS
+
+https://tailwindcss.com/docs/guides/vite
+
