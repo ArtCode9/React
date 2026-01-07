@@ -110,3 +110,9 @@ Get started with Tailwind CSS
 
 https://tailwindcss.com/docs/guides/vite
 
+also check Your mind map in this project 05 
+and mind map exercise ex6_tailwinds
+
+------------------------------
+
+ 
