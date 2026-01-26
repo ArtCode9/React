@@ -107,3 +107,4 @@ You should use React's "ref" feature to get hold of the ```<input type="file">``
    - Can be used to gain direct DOM element access(-> great for reading values or accessing certain browser API's)
 
 ------------------------
+
