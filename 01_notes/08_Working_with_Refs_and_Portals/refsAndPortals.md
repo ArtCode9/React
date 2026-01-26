@@ -93,3 +93,17 @@ You should use React's "ref" feature to get hold of the ```<input type="file">``
 ***Important***: In this Udemy exercise environment, React hooks must be used directly on the imported React object (import React from 'react'). For example, useState (which you don't need for this task) would then be called like this: React.useState().
 
 
+---------------------------
+
+# State vs Refs
+
+## State :
+   - Causes component re-evaluation(re-execution) when changed
+   - Should be used for values that are directly reflected in the UI
+   - Should not be used for behind the scenes values that have no direct UI impact
+
+## Refs :
+   - Do not cause component re-evaluation when changed
+   - Can be used to gain direct DOM element access(-> great for reading values or accessing certain browser API's)
+
+------------------------
