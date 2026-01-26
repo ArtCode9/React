@@ -157,4 +157,31 @@ npm audit fix
    - Global: CLI tools only (```serve```, ```nodemon```, ```eslint```) 
 
 
+---------------------------------
+🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨
+
+Option A: Change registry globally (recommended)
+```arduino
+npm config set registry https://registry.npmmirror.com/
+```
+Verify:
+
+```
+npm config get registry
+```
+
+This switches all future installs to a mirror.
+
+
+Popular mirrors:
+   - https://registry.npmmirror.com/
+      (fast in many regions)
+   - https://registry.yarnpkg.com/
+   - https://skimdb.npmjs.com/registry/
+
+ To revert to official registry:
+ ```
+    npm config set registry https://registry.npmjs.org/
+```
+
 
