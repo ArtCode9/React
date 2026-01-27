@@ -9,3 +9,8 @@ export default function ProjectsSidebar () {
       </aside>
    );
 }
+
+/* 
+   above all tag in className are tailwind css classes and style i add doc in my project for 
+   more detail and also you must search tailwind docs online for more info you need.
+*/
