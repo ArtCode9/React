@@ -7,14 +7,31 @@ import ProjectsSidebar from "./components/ProjectsSidebar.jsx";
 function App() {
 
   const [projectState , setProjectsState] = useState({
-    selectedProject : null,
+    selectedProjectId: undefined,
     projects: []
   });
 
+  function handleStartAddProject() {
+    setProjectsState(prevState => {
+      return {
+        ...prevState,
+        selectedProjectId: null,
+      };
+    });
+  }
+
+  let content;
+
+  if(projectState.selectedProjectId === null) {
+    content = <NewProject />
+  } else if (projectState.selectedProjectId === undefined) {
+    content = <NoProjectSelected onStartAddProject={handleStartAddProject}/>
+  }
+
   return (
     <main className="h-screen my-8 flex gap-8">
-      <ProjectsSidebar />
-      <NoProjectSelected />
+      <ProjectsSidebar  onStartAddProject={handleStartAddProject}/>
+      {content}
     </main>
   );
 }
