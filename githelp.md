@@ -81,7 +81,30 @@ and after  rename it you can push
 git push -u origin main
 ```
 
-----
+------
+```git clone``` (working with existing repositories)
+
+```.gitignore``` (to avoid committing node_modules, vendor, env files, etc.)
+
+```git pull``` (syncing before push)
+
+```git fetch``` (safe remote updates)
+
+```git log``` (history inspection)
+
+```git diff``` (review changes)
+
+```git checkout -b``` / ```git switch -c``` (branch creation)
+
+```git merge``` or ```git rebase``` (branch integration)
+
+Handling auth (HTTPS token vs SSH) with example
+
+Undo basics: ```git restore```, ```git reset --soft/--hard```
+
+Conflict resolution basics
+
+------
 
 🔗 Helpful Git Links
 
