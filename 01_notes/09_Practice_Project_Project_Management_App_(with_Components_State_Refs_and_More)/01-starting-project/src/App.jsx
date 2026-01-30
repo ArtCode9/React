@@ -9,8 +9,13 @@ function App() {
 
   const [projectState , setProjectsState] = useState({
     selectedProjectId: undefined,
-    projects: []
+    projects: [],
+    tasks: [],
   });
+
+  function handleAddTask() {}
+
+  function handleDeleteTask() {}
 
   function handleSelectedProject(id){
     setProjectsState((prevState) => {
@@ -38,7 +43,7 @@ function App() {
       }
     });
   }
-
+ 
   function handleAddProject(projectData) {
     setProjectsState(prevState => {
       const projectId = Math.random();
