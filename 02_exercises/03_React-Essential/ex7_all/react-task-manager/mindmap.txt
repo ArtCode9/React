@@ -202,3 +202,17 @@ UI Layer (Tailwind)
     ├── Row layout
     ├── Status badge
     └── Delete action
+----------------------------------------------------
+
+
+App.jsx
+│
+├── Existing: TaskForm / TaskList / TaskItem
+│
+└── New: TaskPriorityManager.jsx
+     │
+     ├── State        → local selected priority per task
+     ├── Props        → task list + updatePriority function
+     ├── Events       → onChange priority dropdown
+     ├── Derived Data → maybe highlight high priority tasks
+     └── Ref          → auto-focus first task's priority dropdown
