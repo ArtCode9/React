@@ -165,3 +165,40 @@ Typical uses:
    ❌ NOT for UI data
    ❌ NOT for rendering
    ❌ NOT for replacing state
+
+
+----------------------------------
+🧠 UPDATED MIND MAP (STYLE LAYER)
+React App
+│
+├── Logic Layer
+│   ├── State
+│   ├── Props
+│   ├── Events
+│   ├── Refs
+│
+├── View Layer (JSX)
+│   ├── Components
+│   └── Tailwind Utility Classes
+│
+└── Build Layer
+    ├── Vite
+    ├── PostCSS
+    └── Tailwind v3
+---------------
+UI Layer (Tailwind)
+│
+├── TaskForm
+│   ├── Card container
+│   ├── Input focus styles
+│   ├── Select styles
+│   └── Primary action button
+│
+├── TaskList
+│   ├── Empty state text
+│   └── Vertical spacing
+│
+└── TaskItem
+    ├── Row layout
+    ├── Status badge
+    └── Delete action

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import TaskList from "./components/TaskList.jsx";
 import TaskForm from "./components/TaskForm.jsx";
+import CounterDashboard from './components/CounterDashboard'
+
 
 function App() {
   
@@ -30,8 +32,9 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>React Task Manager</h1>
+    <div className="p-6">
+      <h1 className="text-3xl font-bold text-cyan-400 text-center mb-6">
+        React Task Manager</h1>
       <select value={filter} onChange={e => setFilter(e.target.value)}>
         <option value="All">All</option>
         <option value="Todo">Todo</option>
@@ -40,6 +43,10 @@ function App() {
       </select>
       <TaskForm onAddTask={addTask}/>
       <TaskList tasks={filteredTasks} onDeleteTask={deleteTask} />
+
+      <CounterDashboard /> {/* 🧩 new feature */}
+
+      
     </div>
   )
 }

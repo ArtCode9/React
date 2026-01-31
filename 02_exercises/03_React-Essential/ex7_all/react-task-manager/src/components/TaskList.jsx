@@ -3,13 +3,13 @@ import TaskItem from './TaskItem'
 
 function TaskList({ tasks, onDeleteTask }) {
   if (!Array.isArray(tasks)) {
-    return <p>Invalid tasks data</p>
+    return <p className="text-red-400 text-sm text-center">Invalid tasks data</p>
   }
 
-  if(tasks.length === 0) return <p>No Tasks yet.</p>
+  if(tasks.length === 0) return <p className="text-gray-400 text-center italic">No Tasks yet.</p>
 
   return (
-    <ul>
+    <ul className="space-y-3">
       {tasks.map(task => (
         <TaskItem
           key={task.id}
