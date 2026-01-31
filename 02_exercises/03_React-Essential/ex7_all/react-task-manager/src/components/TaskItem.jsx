@@ -1,7 +1,8 @@
-function TaskItem({ title, status}) {
+function TaskItem({ title, status, onDelete}) {
    return (
       <li>
          {title} - <small>{status}</small>
+         <button onClick={onDelete}>X</button>
       </li>
    );
 }

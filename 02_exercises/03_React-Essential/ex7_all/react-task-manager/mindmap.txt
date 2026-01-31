@@ -1,0 +1,167 @@
+step 1:
+React Task Manager App
+│
+├── App.jsx  (ROOT COMPONENT)
+│   │
+│   ├── State (SOURCE OF TRUTH)
+│   │   ├── tasks        → Array of task objects
+│   │   └── filter       → UI state (All / Todo / Doing / Done)
+│   │
+│   ├── Functions (LOGIC)
+│   │   ├── addTask()    → adds new task to state
+│   │   ├── deleteTask() → removes task by id
+│   │
+│   ├── Derived Data (NOT STATE)
+│   │   └── filteredTasks → tasks after applying filter
+│   │
+│   ├── JSX (UI STRUCTURE)
+│   │   ├── <h1 />
+│   │   ├── <TaskForm />
+│   │   ├── <select /> (filter)
+│   │   └── <TaskList />
+│   │
+│   └── Props SENT DOWN
+│       ├── onAddTask → TaskForm
+│       ├── tasks     → TaskList
+│       └── onDelete  → TaskList
+│
+├── TaskForm.jsx (CONTROLLED FORM COMPONENT)
+│   │
+│   ├── Local State
+│   │   ├── title  → input value
+│   │   └── status → select value
+│   │
+│   ├── Events
+│   │   └── handleSubmit()
+│   │
+│   ├── JSX
+│   │   ├── <form>
+│   │   ├── <input />
+│   │   ├── <select />
+│   │   └── <button />
+│   │
+│   └── Emits Events UP
+│       └── onAddTask(title, status)
+│
+├── TaskList.jsx (PRESENTATIONAL COMPONENT)
+│   │
+│   ├── Props
+│   │   ├── tasks (array)
+│   │   └── onDeleteTask (function)
+│   │
+│   ├── Logic
+│   │   ├── validation (Array.isArray)
+│   │   └── conditional rendering
+│   │
+│   ├── JSX
+│   │   └── <ul>
+│   │       └── tasks.map(...)
+│   │
+│   └── Passes Props DOWN
+│       └── <TaskItem />
+│
+├── TaskItem.jsx (LEAF / DUMB COMPONENT)
+│   │
+│   ├── Props
+│   │   ├── title
+│   │   ├── status
+│   │   └── onDelete
+│   │
+│   ├── JSX ONLY
+│   │   └── <li>
+│   │
+│   └── Emits Event UP
+│       └── onDelete()
+│
+└── main.jsx (BOOTSTRAP FILE)
+    │
+    ├── ReactDOM.createRoot()
+    ├── <React.StrictMode>
+    └── Mounts <App />
+
+
+--------------------------------------------------
+| Component | Type              | Responsibility |
+| --------- | ----------------- | -------------- |
+| App       | Smart / Container | State + logic  |
+| TaskForm  | Controlled        | Input + events |
+| TaskList  | Presentational    | Render list    |
+| TaskItem  | Dumb / Leaf       | Display only   |
+--------------------------------------------------
+| State  | Lives In | Why                       |
+| ------ | -------- | ------------------------- |
+| tasks  | App.jsx  | Shared by many components |
+| filter | App.jsx  | Controls list view        |
+| title  | TaskForm | Local form data           |
+| status | TaskForm | Local form data           |
+--------------------------------------------------
+🧠 GOLDEN REACT RULES (FROM YOUR PROJECT)
+1. State lives high, UI lives low
+2. Props go down, events go up
+3. Never duplicate state
+4. Components do one job
+5. JSX describes UI, not logic
+
+-----------------------------------------------------
+step 2:
+React Task Manager App
+│
+├── App.jsx (ROOT COMPONENT)
+│   ├── State
+│   │   ├── tasks
+│   │   └── filter
+│   │
+│   ├── Logic
+│   │   ├── addTask()
+│   │   ├── deleteTask()
+│   │
+│   ├── JSX
+│   │   ├── <TaskForm />
+│   │   └── <TaskList />
+│   │
+│   └── Props Down
+│       ├── onAddTask
+│       └── tasks
+│
+├── TaskForm.jsx (CONTROLLED + REF COMPONENT) ⭐ NEW
+│   ├── State
+│   │   ├── title
+│   │   └── status
+│   │
+│   ├── Ref
+│   │   └── inputRef → DOM element
+│   │
+│   ├── Events
+│   │   └── handleSubmit()
+│   │
+│   ├── JSX
+│   │   ├── <input ref={inputRef} />
+│   │   └── <button />
+│   │
+│   └── Side Effects (Imperative)
+│       └── focus input
+│
+├── TaskList.jsx
+│   └── (unchanged)
+│
+└── TaskItem.jsx
+    └── (unchanged)
+
+🧠 WHAT useRef IS (MENTAL MODEL)
+useState
+
+   “When this changes → re-render UI”
+
+useRef
+
+   “I need to remember something without re-rendering”
+
+Typical uses:
+   - DOM access (focus, scroll)
+   - Storing timers / previous values
+   - Imperative actions
+
+❌ WHAT useRef IS NOT
+   ❌ NOT for UI data
+   ❌ NOT for rendering
+   ❌ NOT for replacing state

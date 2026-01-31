@@ -1,14 +1,12 @@
 
 import TaskItem from './TaskItem'
 
-function TaskList({ tasks }) {
+function TaskList({ tasks, onDeleteTask }) {
   if (!Array.isArray(tasks)) {
     return <p>Invalid tasks data</p>
   }
 
-  if (tasks.length === 0) {
-    return <p>No tasks yet.</p>
-  }
+  if(tasks.length === 0) return <p>No Tasks yet.</p>
 
   return (
     <ul>
@@ -17,6 +15,7 @@ function TaskList({ tasks }) {
           key={task.id}
           title={task.title}
           status={task.status}
+          onDelete={() => onDeleteTask(task.id)}
         />
       ))}
     </ul>
