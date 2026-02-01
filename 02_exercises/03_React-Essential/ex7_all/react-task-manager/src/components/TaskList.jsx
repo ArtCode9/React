@@ -1,4 +1,5 @@
 
+import Square from './Square'
 import TaskItem from './TaskItem'
 
 function TaskList({ tasks, onDeleteTask }) {
@@ -18,6 +19,9 @@ function TaskList({ tasks, onDeleteTask }) {
           onDelete={() => onDeleteTask(task.id)}
         />
       ))}
+      <div>
+        <Square/>
+      </div>
     </ul>
   )
 }

@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import Square from './Square';
 
 function TaskForm({ onAddTask }) {
   const [title, setTitle] = useState('')
@@ -71,6 +72,7 @@ Creates a mutable box - .current will point to the DOM node -Does NOT cause re-r
         >
         Add
       </button>
+      <Square />
     </form>
   )
 }

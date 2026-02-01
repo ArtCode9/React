@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react'
+import Square from './Square.jsx'
 
 function CounterDashboard() {
+  let messageFromCounter = 'Hello My name is props'
   const [counters, setCounters] = useState([
     { id: 1, label: 'Apples', value: 2 },
     { id: 2, label: 'Bananas', value: 5 },
@@ -26,6 +28,10 @@ function CounterDashboard() {
 
   function resetAll() {
     setCounters(prev => prev.map(c => ({ ...c, value: 0 })))
+  }
+
+  function handleSquareClick(message) {
+    console.warn('Message from Square: ', message)
   }
 
   return (
@@ -82,8 +88,19 @@ function CounterDashboard() {
       >
         Reset All
       </button>
+      <Square 
+        message={messageFromCounter}
+        onSquareAction={handleSquareClick}
+        setCounters={setCounters}
+        />
     </div>
   )
 }
 
 export default CounterDashboard
+
+/* 
+          setCounters={setCounters}
+With about tag
+Now the child square has direct access to parent state setter
+*/
