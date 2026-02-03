@@ -9,3 +9,8 @@ beyond basic apps and Lifting Up State
 
 ----------------------------------
 
+## Prop Drilling 
+Passing shared data through multiple components layers
+
+-------------------------
+one possible solution for this drilling problem is to embrace component composition.
