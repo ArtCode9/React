@@ -1,0 +1,25 @@
+index.html 
+   |
+   |
+   main.jsx
+   |
+   |
+   <App/>
+   |
+   |
+<CounterGame />
+   |
+   |
+TimerDisplay / CountDisplay / Controls
+------------------------------
+
+Props Flow Down:
+
+   CounterGame --> Controls --> Button
+
+Events flow up:
+
+   Button click --> Controls ---> CounterGame
+
+----------------------------
+
