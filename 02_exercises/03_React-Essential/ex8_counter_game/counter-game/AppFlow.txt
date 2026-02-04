@@ -23,3 +23,20 @@ Events flow up:
 
 ----------------------------
 
+1️⃣ What are CSS Modules (in one sentence)
+CSS Modules scope styles locally to a component, so class names never clash globally.
+Instead of:
+   .home-container { }
+You get: 
+   .home_container_X9s3K
+Automatically--- no effort from you.
+
+--------------------------
+2️⃣ Rule #1: File naming (IMPORTANT)
+CSS Modules must be named like this 👇
+     
+      ComponentName.module.css
+
+❌ App.css → global
+❌ home.css → global
+✅ Home.module.css → module

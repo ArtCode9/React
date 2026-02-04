@@ -1,18 +1,20 @@
+import styles from "./Controls.module.css";
+
 function Controls ({ timer, onStart, onClick, onReset}) {
    return (
-      <>
-         <button onClick={onStart} disabled={timer !== 0}>
+      <div className={styles.wrapper}>
+         <button className={styles.button} onClick={onStart} disabled={timer !== 0}>
             start
          </button>
          
-         <button onClick={onClick} disabled={timer === 0}>
+         <button className={styles.button} onClick={onClick} disabled={timer === 0}>
             Click me
          </button>
 
-         <button onClick={onReset}>
+         <button className={styles.button} onClick={onReset}>
             reset
          </button>
-      </>
+      </div>
    );
 }
 
