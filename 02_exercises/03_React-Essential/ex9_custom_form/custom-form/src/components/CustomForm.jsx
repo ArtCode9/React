@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import InputField from './InputField.jsx';
+import PasswordStrength from './PasswordStrength.jsx';
 
 function CustomForm() {
    // 🧠 Form State
@@ -84,6 +85,8 @@ function CustomForm() {
             onChange={handleChange}
             error={errors.password}
          />
+
+         <PasswordStrength password={formData.password}/>
 
          <button
             type='submit'
