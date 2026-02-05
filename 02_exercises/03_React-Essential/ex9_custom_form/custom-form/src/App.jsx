@@ -1,13 +1,13 @@
-
-import './App.css'
+import React from "react";
+import CustomForm from "./components/CustomForm.jsx";
 
 function App() {
-
   return (
-     <div className="text-3xl font-bold text-red-500">
-      Tailwind is working ✅
+    <div className="min-h-screen bg-grey-100 flex item-center justify-center p-4 ">
+      <CustomForm/>
     </div>
   )
 }
 
-export default App
+
+export default App;
