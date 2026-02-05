@@ -53,3 +53,12 @@ Move state closer to where it’s used.
 🔒 Golden Rule
 
 If a component only passes props and doesn’t use them, rethink your design.
+
+--------------------------
+
+# What is a Reducer ?
+a reducer in react app and javascript programming in general is typically a function 
+that reduce one or more complex values to a simpler one.
+
+For Example: 
+[5, 10, 100]  -----> 115
