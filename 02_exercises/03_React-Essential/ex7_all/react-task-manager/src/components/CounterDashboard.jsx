@@ -104,3 +104,22 @@ export default CounterDashboard
 With about tag
 Now the child square has direct access to parent state setter
 */
+
+/* 
+STATE
+  counters
+  label
+
+DERIVED
+  total
+
+ACTIONS
+  addCounter
+  increment
+  resetAll
+
+COMMUNICATION
+  props down
+  callbacks up
+
+*/
