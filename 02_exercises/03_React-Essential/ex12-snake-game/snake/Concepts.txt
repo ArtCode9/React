@@ -1,0 +1,28 @@
+Game Concepts:
+
+Grid system (20x20).
+Snake = array of position.
+Food = single position.
+Direction state.
+Game loop via setInterval.
+Collision detection.
+Immutable updates.
+__________________________________
+
+Core Game Model:
+coordinate system
+
+Each cell is:
+
+   { x: number, y: number }
+
+Snake:
+
+   [
+      { x: 10, y:10 },
+      { x: 9, y: 10},
+      { x: 8, y: 10},
+   ]
+
+Head = first element.
+__________________________________
