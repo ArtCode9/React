@@ -1,0 +1,30 @@
+📌 Project: ProTasker – Advanced Project Management Dashboard
+
+A full-featured SaaS-style project management system.
+It will include:
+ - Authentication
+ - Role-based authorization
+ - Dashboard with analytics
+ - Project and task CRUD
+ - Drag and Drop kanban board
+ - REST API integration
+ - Global state management
+ - Custom hooks
+ - Form validation
+ - Performance optimization
+ - Testing
+ - Code splitting
+ - Error boundaries
+ - Context vs Redux comparison
+ - Reusable component architecture
+ - Clean folder structure
+ - Deployment strategy
+
+This Project Will expose nearly all important react concepts.
+_____________________________________________________________
+Tech Stack
+
+React 18 - Vite - React router - redux Toolkit - React Hook Form - Zod - Axios - React Query
+Tailwindcss - DND kit - Jest + react testing library.
+_____________________________________________________________
+
