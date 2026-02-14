@@ -6,10 +6,22 @@ import Modal from './components/Modal.jsx';
 import DeleteConfirmation from './components/DeleteConfirmation.jsx';
 import logoImg from './assets/logo.png';
 
+import { sortPlacesByDistance } from './loc.js';
+
 function App() {
   const modal = useRef();
   const selectedPlace = useRef();
   const [pickedPlaces, setPickedPlaces] = useState([]);
+
+  // This provided by browser not react 👇
+  navigator.geolocation.getCurrentPosition((position) => {   // )
+    const sortedPlaces = sortPlacesByDistance(               // |
+      AVAILABLE_PLACES,                                      // |   This entire code 
+      position.coords.latitude,                              // | =  is actually a 
+      position.coords.longitude                              // |   Side effects
+    );                                                       // |   not directly related
+  });                                                        // )   with app task render JSX
+
 
   function handleStartRemovePlace(id) {
     modal.current.open();
