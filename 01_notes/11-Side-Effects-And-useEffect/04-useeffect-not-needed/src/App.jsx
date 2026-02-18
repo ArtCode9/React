@@ -5,36 +5,43 @@ import { AVAILABLE_PLACES } from './data.js';
 import Modal from './components/Modal.jsx';
 import DeleteConfirmation from './components/DeleteConfirmation.jsx';
 import logoImg from './assets/logo.png';
-
 import { sortPlacesByDistance } from './loc.js';
+
+const storedIds = JSON.parse(localStorage.getItem('selectedPlaces')) || [];
+const storedPlaces = storedIds.map((id) =>
+  AVAILABLE_PLACES.find((place) => place.id === id)
+);
 
 function App() {
   const modal = useRef();
   const selectedPlace = useRef();
   const [availablePlaces, setAvailablePlaces] = useState([]);
-  const [pickedPlaces, setPickedPlaces] = useState([]);
+  const [pickedPlaces, setPickedPlaces] = useState(storedPlaces);
 
-  // useEffect unlike useState or useRef does not return a value, though.
-  // instead useEffect needs two arguments.
-  // the first argument is a function that should wrap your side effect code.
-  // the second argument is an array of dependencies
+//------------------------------------------------------------------------------
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {   
-      const sortedPlaces = sortPlacesByDistance(               
-        AVAILABLE_PLACES,                                      
-        position.coords.latitude,                              
-        position.coords.longitude                              
-      );                                                       
+   
+      const storedIds = JSON.parse(localStorage.getItem('selectedPlaces')) || [];
+      const storedPlaces = storedIds.map((id) =>
+        AVAILABLE_PLACES.find((place) => place.id === id)
+      );
+
+      setPickedPlaces(storedPlaces);
+  }, [])
+//------------------------------------------------------------------------------
+  useEffect(() => {
+
+    navigator.geolocation.getCurrentPosition((position) => {
+      const sortedPlaces = sortPlacesByDistance(
+        AVAILABLE_PLACES,
+        position.coords.latitude,
+        position.coords.longitude
+      );
+
       setAvailablePlaces(sortedPlaces);
-    });                                                        
+    });
+
   }, []);
-  // now this not run into this infinite loop problem with help of useEffect
-  /* 
-    The idea behind useEffect is that this function which you pass as 
-    a first argument to useEffect will be executed by react after every 
-    component execution.
-  */
-  
 
   function handleStartRemovePlace(id) {
     modal.current.open();
@@ -54,10 +61,10 @@ function App() {
       return [place, ...prevPickedPlaces];
     });
 
-    const storedIds = JSON.parse(localStorage.getItem('selectedPlace')) || [];
-    if (storedIds.indexOf(id) === -1 ) {
+    const storedIds = JSON.parse(localStorage.getItem('selectedPlaces')) || [];
+    if (storedIds.indexOf(id) === -1) {
       localStorage.setItem(
-        'selectedPlace',
+        'selectedPlaces',
         JSON.stringify([id, ...storedIds])
       );
     }
@@ -68,6 +75,12 @@ function App() {
       prevPickedPlaces.filter((place) => place.id !== selectedPlace.current)
     );
     modal.current.close();
+
+    const storedIds = JSON.parse(localStorage.getItem('selectedPlaces')) || [];
+    localStorage.setItem(
+      'selectedPlaces',
+      JSON.stringify(storedIds.filter((id) => id !== selectedPlace.current))
+    );
   }
 
   return (
