@@ -15,3 +15,8 @@ so side effects not directly related to the task to the main goal of this compon
 we can not use "useEffect" because we not allowed to use react hooks in nested functions, if statements or anything like that.
 
 They must use directly in the root level of your components functions.
+
+-----------------------
+
+useEffect only cares about dependencies That
+would cause the component function to execute again.
