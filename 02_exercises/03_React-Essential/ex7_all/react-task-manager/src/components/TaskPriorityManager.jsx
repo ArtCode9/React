@@ -1,5 +1,6 @@
 import { useRef } from "react"
-import Square from "./Square"
+import Square from "./Square.jsx"
+import Yellow  from "./Yellow.jsx"
 
 function TaskPriorityManager({ tasks, onUpdatePriority }) {
   const firstSelectRef = useRef(null)
@@ -46,6 +47,7 @@ function TaskPriorityManager({ tasks, onUpdatePriority }) {
         </ul>
       )}
       <Square/>
+      <Yellow />
     </div>
   )
 }

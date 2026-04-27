@@ -1,5 +1,6 @@
 
-import Square from './Square'
+import Square from './Square.jsx'
+import Yellow from './Yellow.jsx'
 import TaskItem from './TaskItem'
 
 function TaskList({ tasks, onDeleteTask }) {
@@ -21,6 +22,7 @@ function TaskList({ tasks, onDeleteTask }) {
       ))}
       <div>
         <Square/>
+        <Yellow />
       </div>
     </ul>
   )
