@@ -1,0 +1,62 @@
+These are the core ideas every react developer must understand:
+
+Stage 1️⃣ : React Fundamentals
+
+   1. JSX Syntax  = writing HTML-like code inside javascript, expressions, embedding variables
+
+   2. Components = Functional components, props, and rendering UI pieces
+
+   3. Props(Properties) = Passing data from parent to child components
+
+   4. State(useState) = Managing dynamic data inside a component
+
+   5. Event Handling = Click , change , submit events and synthetic events
+   
+   6. Conditional Rendering = Showing or hiding elements base on data
+
+   7. Lists and keys = Rendering arrays with .map() and using unique key props
+
+   8. Styling Components = Using className, inline style, tailwindcss, or CSS modules
+____________________________________________________________________________________________
+
+Stage 2️⃣ : React Hooks And Effects
+
+   1. useEffect Hook  🟰 Performing side effect (fetching data, updating document title, etc)
+
+   2. useRef Hook 🟰 Accessing DOM elements directly or persisting values without re-render 
+
+   3. Component lifecycle 🟰 when components mount, update, unmount.
+
+   4. Hook Rules 🟰 Why you must call hooks at the top level and never inside condition.
+____________________________________________________________________________________________
+
+Stage  3️⃣: Data Flow and Reusability
+
+   1. Lifting Stat up = Sharing data between sibling component via the parent
+
+   2. Controlled vs Uncontrolled Component = Managing from inputs correctly
+
+   3. Context API (useContext) = Passing data deeply without props chains
+
+   4. Custom Hooks = Writing your own reusable logic functions.
+____________________________________________________________________________________________
+
+Stage 4️⃣ : Routing and API Handling
+
+   1. React router = Creating multi-page apps with routes
+
+   2. Fetching Data = Using fetch or axios inside useEffects
+
+   3. loading and Error Handling = Handling components states(loading error success)
+____________________________________________________________________________________________
+
+Stage 5️⃣ : Advanced
+
+   1. Performance Optimization = Memoization (React.memo , useMemo, useCallback)
+
+   2. Props Drilling Solution = Using Context or libraries like Zustand , Redux
+
+   3. Lazy Loading / Code Splitting = Loading Components only when needed
+
+   4. Testing React Apps = Using Jest And React Testing Library
+____________________________________________________________________________________________
