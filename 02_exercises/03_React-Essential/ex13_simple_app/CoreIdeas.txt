@@ -61,3 +61,35 @@ Stage 5️⃣ : Advanced
 
    4. Testing React Apps = Using Jest And React Testing Library
 ____________________________________________________________________________________________
+
+
+
+Coverage check (your list)
+ 1. JSX Syntax ✅
+   JSX in JS, {} for expressions, attributes like className.
+
+ 2. Components (functional) ✅
+   Components are functions that return JSX.
+
+ 3. Props ✅
+   Parent → child data passing (like tasks, onDelete, etc.).
+
+ 4. State (useState) ✅
+
+   Dynamic data and re-rendering when state updates.
+
+ 5. Event Handling ✅
+   
+   onClick, onChange, onSubmit (React synthetic events).
+ 
+ 6. Conditional Rendering ✅
+   
+   E.g. show “No tasks yet” when list is empty.
+ 
+ 7. Lists and keys ✅
+   
+   .map() and key for identity across updates.
+ 
+ 8. Styling components ✅
+   
+   className, inline styles, Tailwind/CSS approaches.

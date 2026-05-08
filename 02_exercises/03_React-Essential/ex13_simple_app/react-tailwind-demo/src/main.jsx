@@ -4,6 +4,7 @@ import App from './App.jsx';
 import Box from './component/Box.jsx';
 import Task from './component/Task.jsx';
 import Tiny from './component/Tiny.jsx';
+import TaskTwo from './component/TaskTwo.jsx';
 import './index.css';
 
 // for Quick fix id react not work use this import
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Task />
       <Box />
       <Tiny />
+      <TaskTwo />
   </React.StrictMode>
 );
 
