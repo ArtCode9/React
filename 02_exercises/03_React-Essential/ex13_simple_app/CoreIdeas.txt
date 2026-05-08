@@ -5,6 +5,7 @@ Stage 1️⃣ : React Fundamentals
    1. JSX Syntax  = writing HTML-like code inside javascript, expressions, embedding variables
 
    2. Components = Functional components, props, and rendering UI pieces
+      - component just javascript function that returns JSX.
 
    3. Props(Properties) = Passing data from parent to child components
 
