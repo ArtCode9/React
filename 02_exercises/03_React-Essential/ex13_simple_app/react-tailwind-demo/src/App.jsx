@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from './component/Button.jsx';
+import NewSection from './component/NewSection.jsx';
 
 function App() {
   
@@ -32,6 +33,8 @@ function App() {
        )
       }
       
+      <NewSection />
+      <NewSection />
     </div>
   );
 }
