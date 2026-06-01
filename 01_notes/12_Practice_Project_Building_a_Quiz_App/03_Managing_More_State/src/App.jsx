@@ -1,17 +1,15 @@
-import Header from "./components/Header.jsx";
-import Quiz from "./components/Quiz.jsx";
-import Footer from "./components/Footer.jsx";
+import Header from './components/Header.jsx';
+import Quiz from './components/Quiz.jsx';
 
 function App() {
-   return (
-   <>
+  return (
+    <>
       <Header />
       <main>
-         <Quiz />
+        <Quiz />
       </main>
-      <Footer /> 
-   </>
-   )   
+    </>
+  );
 }
 
 export default App;
