@@ -1,5 +1,5 @@
 # React
-20205 - Dec - 25
+2025 - Dec - 25
 
 title: React master
 ```
