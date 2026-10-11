@@ -6,6 +6,7 @@ function TaskCard({ task }) {   // task is prop and also is object
          <span>
             {task.completed ? 'Completed' : 'Not Completed'}
          </span>
+         <p>{task.code}</p>
       </article>
    ) 
 }
