@@ -1,12 +1,16 @@
 function TaskCard({ task }) {   // task is prop and also is object
    return (
       <article> 
-         <h2>{task.title}</h2>
+         <h3>{task.title}</h3>
+
          <p>{task.description}</p>
-         <span>
-            {task.completed ? 'Completed' : 'Not Completed'}
-         </span>
-         <p>{task.code}</p>
+
+         <p>
+            Status:{' '}
+            <strong>
+               {task.completed ? 'Completed' : 'In Progress'}
+            </strong>
+         </p>
       </article>
    ) 
 }

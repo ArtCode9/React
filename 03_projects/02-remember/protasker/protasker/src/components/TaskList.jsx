@@ -4,10 +4,16 @@ function TaskList({ items }) {  /* This {} her is  doing Object Destructuring in
    return(
       <section>
          <h2>My Tasks</h2>
-
-         {items.map((task) => (
-            <TaskCard key={task.id} task={task}/>
-         ))}
+         
+         {/* This called conditional rendering */}
+         {/* this is js ternary operator */}
+         {items.length === 0 ? (
+            <p>No tasks available. add your first task!🍕</p>
+         ) : (
+            items.map((task) => (
+               <TaskCard key={task.id} task={task}/>
+            ))
+         )}
       </section>
    ) 
 }
