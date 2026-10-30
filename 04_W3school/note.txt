@@ -46,3 +46,170 @@ mycar.show();
 
 ---------------------------------------------------------------------------
 Arrow Function :
+allow us to write shorter function
+
+hello = () => { return "Hello World"; }
+
+hello = (val) => { return "Hello" + val}
+
+hello = val => "Hello" + val ;
+
+---------------------------------------------------------------------------
+Variables: 
+If you use `var` outside of a function, it belongs to the global scope.
+If you use `var` inside of a function, it belongs to that function.
+If you use `var` inside of a block, i.e. a for loop, the variable is still available outside of that block.
+
+`var` has a function scope, not a block scope.
+
+let is the block scoped version of var, and is limited to the block (or expression) where it is defined.
+If you use let inside of a block, i.e. a for loop, the variable is only available inside of that loop.
+
+`let` has a block scope.
+
+`const` is a variable that once it has been created, its value can never change.
+`const` has a block scope.
+
+---------------------------------------------------------------------------
+map() :
+
+The map() method creates a new array with the results of calling a function for every array element.
+
+const number = [1,2,3];
+const double = number.map(x => x * 2);
+
+
+map() in react :
+The map() method is commonly used in React to render lists of elements:
+
+const fruitList = ['apple', 'banana', 'cherry'];
+
+```
+   function MyList () {
+      return (
+         <ul>
+            {fruitList.map(fruit => 
+               <li key={fruit}>{fruit}</li>
+            )}
+         </ul>
+      )
+   }
+```
+
+Note: When using map() in React to create list items, each item needs a unique key prop.
+
+
+map() with Objects :
+You can also use map() with arrays of objects:
+
+```
+   const users = [
+   { id: 1, name: 'John', age: 30 },
+   { id: 2, name: 'Jane', age: 25 },
+   { id: 3, name: 'Bob', age: 35 }
+   ];
+
+   function UserList() {
+   return (
+      <ul>
+         {users.map(user => 
+         <li key={user.id}>
+            {user.name} is {user.age} years old
+         </li>
+         )}
+      </ul>
+   );
+   }
+```
+
+map() Parameters : 
+the map() method takes three parameters:
+
+   currentValue: The current element begin processed
+   index:        The index of the current element(optional)
+   array:        The array that map was called upon(optional)
+
+```
+const fruitlist = ['apple', 'banana', 'cherry'];
+
+function App() {
+  return (
+    <ul>
+      {fruitlist.map((fruit, index, array) => {
+        return (
+          <li key={fruit}>
+            Name: {fruit}, Index: {index}, Array: {array}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+```
+
+Note: The map() method always returns a new array. It does not modify the original array.
+
+
+-----------------------------------------------------------------------------
+
+Destructuring in React ::
+
+Destructuring is a JavaScript feature that allows you to extract values from objects or arrays into distinct variables. In React, it's commonly used with props, hooks, and state management.
+
+Note: Destructuring makes React code cleaner and more readable by reducing repetitive object and array access.
+
+****
+Destructuring Arrays ::
+Here is the old way of assigning array items to a variable:
+
+Example: before:
+```
+      const vehicles = ['mustang', 'f-150', 'expedition'];
+
+      // old way
+      const car = vehicles[0];
+      const truck = vehicles[1];
+      const suv = vehicles[2];
+
+      //You can now access each variable separately:
+      document.getElementById('demo').innerHTML = truck;
+```
+
+Here is the new way of assigning array items to a variable:
+
+while Destructuring:
+
+```
+      const vehicles = ['mustang', 'f-150', 'expedition'];
+
+      const [car, truck, suv] = vehicles;
+
+      //You can now access each variable separately:
+      document.getElementById('demo').innerHTML = truck;
+```
+When destructuring arrays, the order that variables are declared is important.
+If we only want the car and suv we can simply leave out the truck but keep the comma:
+
+```
+      const vehicles = ['mustang', 'f-150', 'expedition'];
+
+      const [car,, suv] = vehicles;
+```
+
+Destructuring comes in handy when a function returns an array:
+
+```
+      function dateInfo(dat) {
+   const d = dat.getDate();
+   const m = dat.getMonth() + 1;
+   const y = dat.getFullYear();
+
+   return [d, m, y];
+   }
+
+   const [date, month, year] = dateInfo(new Date());
+```
+
+*****
+Destructuring Objects ::
+
