@@ -199,12 +199,12 @@ If we only want the car and suv we can simply leave out the truck but keep the c
 Destructuring comes in handy when a function returns an array:
 
 ```
-      function dateInfo(dat) {
-   const d = dat.getDate();
-   const m = dat.getMonth() + 1;
-   const y = dat.getFullYear();
+   function dateInfo(dat) {
+      const d = dat.getDate();
+      const m = dat.getMonth() + 1;
+      const y = dat.getFullYear();
 
-   return [d, m, y];
+      return [d, m, y];
    }
 
    const [date, month, year] = dateInfo(new Date());
@@ -212,4 +212,89 @@ Destructuring comes in handy when a function returns an array:
 
 *****
 Destructuring Objects ::
+you can use destructuring to extract the values from an object:
 
+```
+   const person = {
+      firstName: 'John',
+      lastName: 'Doe',
+      age: 50,
+   };
+
+   //Destructuring
+   let {firstName, lastName, age} = person;
+
+   // You can now access each variables separately:
+   document.getElementById('demo').innerHTML = firstName;
+```
+
+for object the order of the properties does not matter.
+
+Example:
+unpack the value in random order:
+
+```
+   const person = {
+      firstName: 'John',
+      lastName: 'Doe',
+      age: 50,
+   };
+
+   //Destructuring
+   let {lastName, age, firstName } = person;
+```
+
+you can extract only the values you want:
+
+Example: 
+extract only firstName from the object :
+
+```
+   const person = {
+      firstName: 'John',
+      lastName: 'Doe',
+      age: 50,
+   }
+
+   //Destructuring
+   let {firstName} = person
+```
+
+also we can set a default value:
+
+Example:
+Set a default value for the missing property:
+
+```
+   const person = {
+   firstName: "John",
+   lastName: "Doe",
+   age: 50
+   };
+
+   // Destructuring
+   let {firstName, lastName, age, country = "Norway"} = person;
+```
+We can also destructure deeply nested objects by referencing the nested object then
+using a colon and curly braces to again destructure the items needed from the nested object:
+
+```
+   const person = {
+   firstName: "John",
+   lastName: "Doe",
+   age: 50,
+   car: {
+      brand: 'Ford',
+      model: 'Mustang',
+   }
+   };
+
+   // Destructuring
+   let {firstName, car: { brand, model }} = person;
+
+   let message = `My name is ${firstName}, and I drive a ${brand} ${model}.`;
+```
+--------------------------------------------------------------------------------------
+
+******
+Destructuring in React Components ::
