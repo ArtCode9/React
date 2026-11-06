@@ -600,3 +600,25 @@ Tagged Template with multiple expressions that are held in an array using the re
    let text = highlight `Hello ${name1}, and ${name2} , how are you ?`;
 ```
 
+__________________________________________________________________________________________________________
+----------------------------------------------------------------------------------------------------------
+
+Expressions as attributes:
+You can also use javascript Expressions as attribute values. this is very useful for dynamic attribute.
+
+```
+   function car() {
+      const x = "myclass";
+      return (
+         <h1 className={x}>Hello world</h1>
+      )
+   }
+```
+
+Note that the attribute value is not wrapped in quotes,
+this is important when using expressions (JavaScript variables) 
+as attribute values. If you use quotes, JSX will treat it as a
+string literals and not a JavaScript expression.
+
+----------------------------------------------------------------------------------------------------------
+
