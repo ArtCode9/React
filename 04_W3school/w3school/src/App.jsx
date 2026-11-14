@@ -10,6 +10,7 @@ import BooksShelf from "./component/ArrayProps.jsx";
 import Paint from "./component/DestructuringProp.jsx";
 import Parent from "./component/Parent.jsx";
 import Football from "./component/Events.jsx";
+import GoalCount from "./component/Conditional.jsx";
 
 const carinfo = {
   name: "Chevy",
@@ -37,6 +38,9 @@ function App() {
       <Paint number={1234} color="red" brand="castle"/>
       <Parent />
       <Football />
+      <GoalCount isGoal={true}/>
+      <hr></hr>
+      <hr></hr>
     </div>
   )
 }
