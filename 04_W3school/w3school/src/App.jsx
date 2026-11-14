@@ -11,6 +11,10 @@ import Paint from "./component/DestructuringProp.jsx";
 import Parent from "./component/Parent.jsx";
 import Football from "./component/Events.jsx";
 import GoalCount from "./component/Conditional.jsx";
+import ListMap from "./component/ListMap.jsx";
+import MyForm from "./component/Forms.jsx";
+import MyFormTwo from "./component/UseState.jsx";
+import MyFormThree from "./component/SubmitForm.jsx";
 
 const carinfo = {
   name: "Chevy",
@@ -41,6 +45,10 @@ function App() {
       <GoalCount isGoal={true}/>
       <hr></hr>
       <hr></hr>
+      <ListMap />
+      <MyForm />
+      <MyFormTwo />
+      <MyFormThree />
     </div>
   )
 }
