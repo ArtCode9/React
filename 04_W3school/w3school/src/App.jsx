@@ -8,6 +8,8 @@ import Books from "./component/PropsR.jsx";
 import CarShop from "./component/ObjectProps.jsx";
 import BooksShelf from "./component/ArrayProps.jsx";
 import Paint from "./component/DestructuringProp.jsx";
+import Parent from "./component/Parent.jsx";
+import Football from "./component/Events.jsx";
 
 const carinfo = {
   name: "Chevy",
@@ -21,7 +23,7 @@ const booksi = ["alt1", "alt2",];
 function App() {
   return (
     <div className="App">
-      <h1>Hello World !!!!</h1>      
+      <h1>Hello World !!!!</h1>       
       <SampleJsx />
       <Object />
       <IfStatement />
@@ -33,6 +35,8 @@ function App() {
       <CarShop pcarInfo={carinfo}/> 
       <BooksShelf bookshelf={booksi}/>
       <Paint number={1234} color="red" brand="castle"/>
+      <Parent />
+      <Football />
     </div>
   )
 }
