@@ -5,7 +5,7 @@ of the JSX, or you could use a ternary expression instead:
 */
 
 function IfStatement () {
-   const z = 4;
+   const z = 14;
    const x = 5;
    let  y = "Apple";
    if(x < 10) {
