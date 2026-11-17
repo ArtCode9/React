@@ -15,6 +15,9 @@ import ListMap from "./component/ListMap.jsx";
 import MyForm from "./component/Forms.jsx";
 import MyFormTwo from "./component/UseState.jsx";
 import MyFormThree from "./component/SubmitForm.jsx";
+import FormTextarea from "./component/Textarea.jsx";
+import SelectMy from "./component/Select.jsx";
+import MultipleInput from "./component/MultipleInputs.jsx";
 
 const carinfo = {
   name: "Chevy",
@@ -29,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World !!!!</h1>       
+      <MultipleInput />
       <SampleJsx />
       <Object />
       <IfStatement />
@@ -49,6 +53,8 @@ function App() {
       <MyForm />
       <MyFormTwo />
       <MyFormThree />
+      <FormTextarea />
+      <SelectMy />
     </div>
   )
 }
