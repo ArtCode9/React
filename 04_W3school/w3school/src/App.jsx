@@ -18,6 +18,8 @@ import MyFormThree from "./component/SubmitForm.jsx";
 import FormTextarea from "./component/Textarea.jsx";
 import SelectMy from "./component/Select.jsx";
 import MultipleInput from "./component/MultipleInputs.jsx";
+import CheckBox from "./component/CheckBox.jsx";
+import RadioSection from "./component/Radio.jsx";
 
 const carinfo = {
   name: "Chevy",
@@ -32,7 +34,9 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World !!!!</h1>       
+      <RadioSection />
       <MultipleInput />
+      <CheckBox />
       <SampleJsx />
       <Object />
       <IfStatement />
