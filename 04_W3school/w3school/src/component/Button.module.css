@@ -1,0 +1,74 @@
+.mybutton {
+  margin: 12px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  width: 190px;
+}
+
+.primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+/*  
+Composing Classes: 
+CSS Modules allow you to combine classes using the composes keyword:
+Which means that one class can inherit the styles of another class.
+For the previous example, both the primary and the secondary 
+classes are depending on the styles of the mybutton class.
+This can be done by adding composes: mybutton to the primary and secondary classes
+*/
+.third {
+   composes: mybutton;
+   background-color: gold;
+   font-size: 22px;
+   font-weight: bolder;
+}
+
+/* 
+Global Classes:
+When using CSS Modules, the classes in the 
+.module.css file can only be used in the component 
+that imports them. This is done by prefixing the class name 
+with a hash of the file name and a unique identifier.
+It is safe to use the same class name in different files,
+as the names will be unique.
+
+However, sometimes you want your classes to be available globally, and use them in other components.
+
+You can do this with the :global syntax:
+*/
+:global(.myheader) {
+   padding: 20px;
+   font-size: 50px;
+   color: white;
+   background-color: dodgerblue;
+}
+/* 
+The :global wrapper makes the class available for everyone.
+It is simply called .myheader and not prefixed and added a 
+unique identifier like _myheader_q1obu_1
+```
+   import styles from './BlueHeader.module.css';
+
+   function App() {
+      return (
+         <div>
+            <h1 className="myheader">
+            My Header
+            </h1>
+         </div>
+      );
+   }
+```
+
+
+You can combine global and local classes in the same CSS Module:
+*/

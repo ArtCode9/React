@@ -23,6 +23,8 @@ import RadioSection from "./component/Radio.jsx";
 import MyAppPortal from "./component/Portal.jsx";
 import BubblingPortal from "./component/BubblingProtal.jsx";
 import SuspenseSection from "./component/Suspense.jsx";
+import LazyLoading from "./component/SuspenseLazyLoading.jsx";
+import CssModules from "./component/CssModules.jsx";
 
 
 const carinfo = {
@@ -39,6 +41,8 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World !!!!</h1>       
+      <CssModules />
+      <LazyLoading />
       <SuspenseSection />
       <BubblingPortal />
       <RadioSection />
