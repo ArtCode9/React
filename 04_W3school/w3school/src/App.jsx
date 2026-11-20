@@ -22,6 +22,8 @@ import CheckBox from "./component/CheckBox.jsx";
 import RadioSection from "./component/Radio.jsx";
 import MyAppPortal from "./component/Portal.jsx";
 import BubblingPortal from "./component/BubblingProtal.jsx";
+import SuspenseSection from "./component/Suspense.jsx";
+
 
 const carinfo = {
   name: "Chevy",
@@ -37,6 +39,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World !!!!</h1>       
+      <SuspenseSection />
       <BubblingPortal />
       <RadioSection />
       <MyAppPortal />
