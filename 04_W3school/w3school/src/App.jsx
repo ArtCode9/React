@@ -20,6 +20,8 @@ import SelectMy from "./component/Select.jsx";
 import MultipleInput from "./component/MultipleInputs.jsx";
 import CheckBox from "./component/CheckBox.jsx";
 import RadioSection from "./component/Radio.jsx";
+import MyAppPortal from "./component/Portal.jsx";
+import BubblingPortal from "./component/BubblingProtal.jsx";
 
 const carinfo = {
   name: "Chevy",
@@ -28,13 +30,16 @@ const carinfo = {
   year: 1979
 };
 
+
 const booksi = ["alt1", "alt2",];
 
 function App() {
   return (
     <div className="App">
       <h1>Hello World !!!!</h1>       
+      <BubblingPortal />
       <RadioSection />
+      <MyAppPortal />
       <MultipleInput />
       <CheckBox />
       <SampleJsx />
