@@ -25,7 +25,8 @@ import BubblingPortal from "./component/BubblingProtal.jsx";
 import SuspenseSection from "./component/Suspense.jsx";
 import LazyLoading from "./component/SuspenseLazyLoading.jsx";
 import CssModules from "./component/CssModules.jsx";
-
+import CssInJs from "./component/CssInJs.jsx";
+import CssInJsProps from "./component/CssInJsProps.jsx";
 
 const carinfo = {
   name: "Chevy",
@@ -41,6 +42,8 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World !!!!</h1>       
+      <CssInJsProps />
+      <CssInJs />
       <CssModules />
       <LazyLoading />
       <SuspenseSection />
