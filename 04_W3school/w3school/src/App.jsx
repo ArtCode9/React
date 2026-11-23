@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import SampleJsx from "./component/SampleJsx.jsx";
 import Object from "./component/Object.jsx";
 import IfStatement from "./component/IfStatement.jsx";
@@ -28,6 +28,9 @@ import LazyLoading from "./component/SuspenseLazyLoading.jsx";
 import CssModules from "./component/CssModules.jsx";
 import CssInJs from "./component/CssInJs.jsx";
 import CssInJsProps from "./component/CssInJsProps.jsx";
+import Home from './component/Home.jsx';
+import About from './component/About.jsx';
+import Contact from './component/Contact.jsx';
 
 const carinfo = {
   name: "Chevy",
@@ -42,6 +45,20 @@ const booksi = ["alt1", "alt2",];
 function App() {
   return (
    <BrowserRouter>
+      {/* Navigation */}
+      <nav>
+        <Link to="/">Home</Link> |{" "}
+        <Link to="/about">About</Link> |{" "}
+        <Link to="/contact">Contact</Link>
+      </nav>
+
+      {/* Routes */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      
     <div className="App">
       <h1>Hello World !!!!</h1>       
       <CssInJsProps />

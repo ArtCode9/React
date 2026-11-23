@@ -20,5 +20,21 @@ and run the following command to install the package:
 To demonstrate routing, we'll create three pages (or views) 
 in our application: Home, About, and Contact:
 
-Ta Create Views<<<<<<<<
+
+Basic Routing:
+React Router uses three main components for basic routing:
+
+ - Link: Creates navigation links that update the URL
+ - Routes: A container for all your route definitions
+ - Route: Defines a mapping between a URL path and a component
+*/
+/* 
+For the check code and structure see App.jsx first of return JSX.
+*/
+/* 
+In this example:
+
+ - BrowserRouter wraps your app and enables routing functionality
+ - Link components create navigation links
+ - Routes and Route define your routing configuration
 */
