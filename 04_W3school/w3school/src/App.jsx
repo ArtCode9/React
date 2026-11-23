@@ -1,3 +1,4 @@
+import { BrowserRouter } from 'react-router-dom';
 import SampleJsx from "./component/SampleJsx.jsx";
 import Object from "./component/Object.jsx";
 import IfStatement from "./component/IfStatement.jsx";
@@ -40,6 +41,7 @@ const booksi = ["alt1", "alt2",];
 
 function App() {
   return (
+   <BrowserRouter>
     <div className="App">
       <h1>Hello World !!!!</h1>       
       <CssInJsProps />
@@ -75,6 +77,7 @@ function App() {
       <FormTextarea />
       <SelectMy />
     </div>
+   </BrowserRouter>  
   )
 }
 
