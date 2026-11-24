@@ -37,4 +37,7 @@ In this example:
  - BrowserRouter wraps your app and enables routing functionality
  - Link components create navigation links
  - Routes and Route define your routing configuration
+
+
+ Check: NestedRoutes.jsx - App.jsx
 */

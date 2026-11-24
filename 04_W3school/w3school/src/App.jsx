@@ -31,6 +31,9 @@ import CssInJsProps from "./component/CssInJsProps.jsx";
 import Home from './component/Home.jsx';
 import About from './component/About.jsx';
 import Contact from './component/Contact.jsx';
+import Products from './component/Products.jsx';
+import CarProducts from './component/CarProducts.jsx';
+import BikeProducts from './component/BikeProducts.jsx';
 
 const carinfo = {
   name: "Chevy",
@@ -47,9 +50,10 @@ function App() {
    <BrowserRouter>
       {/* Navigation */}
       <nav>
-        <Link to="/">Home</Link> |{" "}
-        <Link to="/about">About</Link> |{" "}
-        <Link to="/contact">Contact</Link>
+        <Link to="/">Home</Link> |{" | "}
+        <Link to="/about">About</Link> |{" | "}
+        <Link to="/contact">Contact</Link> {" | "}
+        <Link to="/Products">Products</Link>
       </nav>
 
       {/* Routes */}
@@ -57,6 +61,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/Products" element={<Products />}>
+          <Route path="CarProducts" element={<CarProducts />} />
+          <Route path="BikeProducts" element={<BikeProducts />} />
+        </Route>
       </Routes>
       
     <div className="App">
